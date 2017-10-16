@@ -1,17 +1,24 @@
 <h1>Employee Component</h1>
 <table class="table table-bordered">
     <thead>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Gender</th>
-        <th>Salary</th>
+       <tr>
+            <th></th>
+            <th></th>
+            <th colspan="4" *ngFor="let h of horizon ">{{h}}</th>
+        </tr>
+        <tr >
+                <th></th>
+                <th></th>
+                <th *ngFor="let m of month ">{{m}}</th>
+        </tr>
     </thead>
-<tbody>
-   <tr *ngFor="let emp of employees">
-     <td>{{emp.code}}</td>
-     <td>{{emp.name}}</td>
-     <td>{{emp.gender}}</td>
-     <td>{{emp.salary}}</td>
-   </tr>
+<tbody *ngFor="let item of information | unique:'item_code'">
+    <tr>
+        <td rowspan="2">{{item.item_code}}</td>
+        <td>kl</td>
+        <td>kllnkl</td>
+    </tr>
+    
+
 </tbody>
-</table>
+</table> 

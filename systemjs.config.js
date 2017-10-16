@@ -11,11 +11,15 @@
     'rxjs':                       'node_modules/rxjs',
     // ng2-bootstrap
     'moment': 'node_modules/moment',
-    'ng2-bootstrap':              'node_modules/ng2-bootstrap',
+    
+    'lodash':                     'https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js',
+    'ng2-bootstrap':'node_modules/ng2-bootstrap',
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
+    'lodash': {defaultExtension: 'js'},
+
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
     // ng2-bootstrap

@@ -10,6 +10,9 @@ import {PageNotFoundComponent} from './PageNotFound.component';
 import {EmployeeComponent} from './Home/employee.component';
 import {HttpModule} from '@angular/http';
 import {EmployeeService} from './Home/EmployeeService';
+import {UniquePipe} from './UniquePipe';
+import {uniqueSource} from './uniquePipe_Source';
+//import {DataTableModule} from "angular2-datatable";
 
 const appRoute:Routes = [
   {path:'Home',component:HomeComponent},
@@ -19,12 +22,13 @@ const appRoute:Routes = [
   {path:'**',component:PageNotFoundComponent}
 ]
 @NgModule({
-  declarations: [AppComponent,HomeComponent,AboutComponent,PageNotFoundComponent,EmployeeComponent],
+  declarations: [AppComponent,HomeComponent,AboutComponent,PageNotFoundComponent,EmployeeComponent,UniquePipe,uniqueSource],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AlertModule.forRoot(),
+   // DataTableModule,
     //RouterModule.forRoot(appRoute,{useHash:true})+
     RouterModule.forRoot(appRoute)
   ],
